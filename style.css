@@ -5,8 +5,15 @@
 }
 
 body {
-    background-color: #fdf6e8;
+    background-color: #fff9ef;
     font-family: "mainFont", "Helvetica", "Arial", sans-serif;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+a {
+    color: black;
+    text-decoration: none;
 }
 
 .hero-section {
@@ -14,13 +21,12 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    position: fixed;
-    width: 100vw;
-    height: 90vh;
+    position: absolute;
+    width: 110vw;
+    height: 100vh;
     top: 0;
     left: 0;
-    border-bottom: 1px solid;
-    z-index: -1;
+    z-index: 1;
 }
 
 .hero-content {
@@ -30,7 +36,7 @@ body {
     justify-content: center;
     display: flex;
     flex-direction: column;
-    bottom: -6rem;
+    top: 8.2rem;
     height: 100vh;
     color: black;
     font-size: 5rem;
@@ -41,7 +47,7 @@ body {
 .experience-btn {
     padding: 10px;
     font-size: 1rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
     background: none;
     cursor: pointer;
 }
@@ -59,13 +65,13 @@ body {
     background-color: black;
     width: 100vw;
     height: 35px;
-    bottom: 10px;
-    right: 8px;
+    margin-top: -1.1vh;
+    right: 10px;
 }
 
 .header-address {
-    position: fixed;
-    top: 7px; 
+    position: absolute;
+    top: 8px; 
     text-decoration: none;
     color: #fdf6e8;
 }
@@ -97,4 +103,146 @@ body {
     height: 4px;
     background-color: black;
     margin-bottom: 6px;
+}
+
+footer {
+    position: absolute;
+    top: 82.5vh;
+    z-index: 0;
+}
+
+.footer-section {
+    border-top: 1px solid black;
+    display: grid;
+    gap: 24px;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100vw;
+    grid-template-columns: 1fr repeat(12, minmax(0, 93px)) 1fr;
+    grid-template-rows: min-content min-content minmax(5rem, 10rem);
+    row-gap: 0;
+    padding-bottom: 28px;
+    margin-top: 8rem;
+}
+
+.footer-section::before {
+    grid-row: 3;
+    grid-column: 1 / -1;
+    border-top: 1px solid black;
+    height: 2px;
+}
+
+.footer-section::before, .footer-section::after {
+    content: "";
+    display: block;
+}
+
+.footer-text {
+    grid-row: 1 / span 2;
+    padding-right: 3rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 22px;
+}
+
+.footer-text, .contact-info {
+    grid-column: 5 / span 5;
+}
+
+.socials {
+    grid-row: 1;
+    border-top: none;
+    border-bottom: 1px solid black;
+    padding-top: 32px;
+    padding-bottom: 5px;
+}
+
+.socials, .location {
+    grid-column: 10 / -2;
+    padding-left: 32px;
+    width: 32rem;
+}
+
+.socials ul {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.location {
+    align-items: flex-start;
+    grid-row: 2;
+    border-left: 1px solid black;
+    display: flex;
+    gap: 1.25rem;
+    padding-top: 32px;
+    padding-bottom: 5px;
+}
+
+.location span {
+    padding-top: 4px;
+}
+
+.contact-info {
+    grid-row: 3;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    gap: 120px;
+    padding-bottom: 0;
+    padding-top: 32px;
+    flex: 1; 
+}
+
+.contact-info dl {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.contact-info dl dt {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    flex: 1;
+}
+
+.contact-info dd {
+    align-content: flex-end;
+    position: relative;
+    right: 2rem;
+    width: 9rem;
+
+}
+
+.links {
+    grid-row: 3;
+    grid-column: span 1 / -2;
+    align-self: end;
+    margin-top: 2rem;
+}
+
+.links ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.socials, .location, .contact-info, .links {
+    font-size: 13px;
+}
+
+.footer-section::after {
+    grid-row: 1 / 3;
+    grid-column: 10;
+    border-left: 1px solid black;
+    width: 2px;
 }
