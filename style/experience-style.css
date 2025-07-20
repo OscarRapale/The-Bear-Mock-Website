@@ -1,0 +1,80 @@
+.experience-hero-section {
+    background-image: url(/images/dessert.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: 110vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    border-bottom: 1px solid black;
+}
+
+.experience-hero-content {
+    position: relative;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    top: 8.2rem;
+    height: 100vh;
+    color: black;
+    font-size: 3.5rem;
+    letter-spacing: 12px;
+}
+
+.booknow-btn {
+    padding: 10px;
+    font-size: 1rem;
+    margin-top: 2rem;
+    background: none;
+    cursor: pointer;
+    margin-right: 45px;
+    border: 1px solid black;
+}
+
+.booknow-btn:hover {
+    background: black;
+    color: #fdf6e8;
+}
+.description {
+    position: absolute;
+    top: 108vh;
+    text-align: left;
+    left: 20rem;
+    max-width: 900px;
+    letter-spacing: 1px;
+    z-index: 5;
+}
+
+.bar-description {
+    position: absolute;
+    top: 310vh;
+    left: 50rem;
+    max-width: 30%;
+    text-align: left;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    z-index: 3;
+    letter-spacing: 1px;
+}
+
+.bar-image {
+    background-image: url(/images/bar.png);
+    position: absolute;
+    top: 310vh;
+    left: 15rem;
+    z-index: -2;
+    width: 35%;
+    height: 70%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 25px;
+}
+
+footer {
+    top: 385vh;
+}

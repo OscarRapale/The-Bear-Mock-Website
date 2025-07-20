@@ -17,7 +17,7 @@ a {
 }
 
 .hero-section {
-    background-image: url(images/hero-image.png);
+    background-image: url(/images/hero-image.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -50,11 +50,12 @@ a {
     margin-top: 2rem;
     background: none;
     cursor: pointer;
+    margin-right: 45px;
 }
 
 .experience-btn:hover {
     background: black;
-    color: #fdf6e8;
+    color: #fff9ef;
 }
 
 .home-header {
@@ -73,7 +74,7 @@ a {
     position: absolute;
     top: 8px; 
     text-decoration: none;
-    color: #fdf6e8;
+    color: #fff9ef;
 }
 
 .reservation-btn {
@@ -87,7 +88,7 @@ a {
 
 .reservation-btn:hover {
     background: black;
-    color: #fdf6e8;
+    color: #fff9ef;
 }
 
 .menu-icon {
