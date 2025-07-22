@@ -1,0 +1,81 @@
+.about-hero-section {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+
+.about-image {
+    position: absolute;
+    width: 30%;
+    height: 88vh;
+    top: 10rem;
+    left: 19rem;
+    border-radius: 25px;
+}
+
+.about-hero-content {
+    position: absolute;
+
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    top: 7rem;
+    left: 20rem;
+    height: 100vh;
+    color: black;
+    letter-spacing: 1px;
+}
+
+.about-heading {
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+.about-text {
+    position: relative;
+    width: 25%;
+    top: 4.5rem;
+    left: 2rem;
+    text-align: left;
+    line-height: 1.5;
+}
+
+.resume-wrapper {
+    background: black;
+    position: absolute;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    top: 70rem;
+    left: 51em;
+    width: 100%;
+    height: 90vh;
+    border-radius: 25px;
+}
+
+.resume-image {
+    position: absolute;
+    width: 30%;
+    height: 90%;
+    top: 70rem;
+    left: 20.5rem;
+    border-radius: 25px;
+}
+
+.resume-container {
+    letter-spacing: 1px;
+    position: relative;
+    width: 25%;
+    right: 32rem;
+    color: white;
+    line-height: 1.5;
+}
+
+footer {
+top: 250vh;
+}
