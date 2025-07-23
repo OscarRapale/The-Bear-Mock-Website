@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style/home-style.css" />
     <link rel="stylesheet" href="style/about-style.css" />
+    <link rel="stylesheet" href="style/sidemenu-style.css">
     <title>About Us | The Bear</title>
   </head>
   <body>
@@ -15,11 +16,18 @@
           >1340 W. Fulton Street, Chicago, IL 60607</a
         >
         <a class="reservation-btn">RESERVATIONS</a>
-        <div class="menu-icon">
-          <div class="bar1"></div>
-          <div class="bar2"></div>
-          <div class="bar3"></div>
-        </div>
+        <div class="menu-icon" id="menu-icon"">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      <div class="sidenav" id="sidenav">
+        <a href="javascript:void(0)" class="close-btn" id="close-btn">&times;</a>
+        <a href="/experience.html">The Bear Experience</a>
+        <a href="/events.html">Events</a>
+        <a href="/about.html">About us</a>
+        <a href="/contact.html">Contact us</a>
+      </div>
       </header>
       <section class="about section">
         <div class="about-hero-section">
@@ -27,7 +35,7 @@
         </div>
         <div class="about-hero-content">
           <div class="about-heading">
-            <h1>About | The Bear</h1>
+            <h1>About The Bear</h1>
           </div>
           <div class="about-text">
             <p>
@@ -153,5 +161,6 @@
         </div>
       </section>
     </footer>
+    <script src="scripts/sidemenu.js"></script>
   </body>
 </html>

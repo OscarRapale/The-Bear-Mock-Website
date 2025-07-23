@@ -40,7 +40,7 @@
     font-size: 1rem;
     margin-top: 2rem;
     background: black;
-    color: #fdf6e8;
+    color: #fff9ef;
     cursor: pointer;
     margin-right: 45px;
     border: 1px solid black;
@@ -48,7 +48,7 @@
 
 .booknow-btn:hover {
     background: black;
-    color: #fdf6e8;
+    color: #fff9ef;
 }
 .description {
     position: absolute;

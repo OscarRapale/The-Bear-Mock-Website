@@ -96,7 +96,8 @@ a {
     flex-direction: column;
     position: absolute;
     right: 3rem;
-    top: 3.4rem; 
+    top: 3.4rem;
+    cursor: pointer;
 }
 
 .bar1, .bar2, .bar3 {
