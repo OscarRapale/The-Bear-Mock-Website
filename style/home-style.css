@@ -48,14 +48,17 @@ a {
     padding: 10px;
     font-size: 1rem;
     margin-top: 2rem;
-    background: none;
-    cursor: pointer;
+    letter-spacing: 1px;
+    background: #111;
+    color: #fff9ef;
     margin-right: 45px;
+    border: 1px solid black;
+    cursor: pointer;
 }
 
 .experience-btn:hover {
-    background: black;
-    color: #fff9ef;
+    box-shadow: inset 400px 0 0 0 #fff9ef;
+    color: #111;
 }
 
 .home-header {
@@ -82,13 +85,22 @@ a {
     right: 8rem;
     top: 3rem;
     border: 1px solid black;
+    background: #111;
     padding: 10px;
+    letter-spacing: 1px;
+    color: #fff9ef;
     cursor: pointer;
 }
 
-.reservation-btn:hover {
-    background: black;
-    color: #fff9ef;
+.reservation-btn, .experience-btn {
+    -webkit-transition: ease-out 1s;
+    -moz-transition: ease-out 1s;
+    transition: ease-out 1s;
+}
+
+.reservation-btn:hover, .experience-btn:hover {
+    box-shadow: inset 400px 0 0 0 #fff9ef;
+    color: #111;
 }
 
 .menu-icon {

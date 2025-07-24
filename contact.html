@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style/home-style.css">
     <link rel="stylesheet" href="style/contact-style.css">
     <link rel="stylesheet" href="style/sidemenu-style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <title>Contact Us | The Bear</title>
 </head>
 <body>
@@ -15,7 +16,7 @@
       <a class="header-address" href="/"
         >1340 W. Fulton Street, Chicago, IL 60607</a
       >
-      <a class="reservation-btn">RESERVATIONS</a>
+      <a href="/contact.html" class="reservation-btn">RESERVATIONS</a>
       <div class="menu-icon" id="menu-icon"">
         <div class="bar1"></div>
         <div class="bar2"></div>
@@ -31,9 +32,9 @@
     </header>
     <section class="contact-section">
       <div>
-        <img class="contact-image" src="images/salmon.png" alt="" />
+        <img class="contact-image" src="images/salmon.png" alt="" data-aos="fade-right" data-aos-duration="1500" />
       </div>
-      <div class="contact-wrapper">
+      <div class="contact-wrapper" data-aos="fade-left" data-aos-duration="1500">
         <div class="contact-container">
             <div class="contact-heading">
               <h1>Contact us</h1>
@@ -122,6 +123,10 @@
         </div>
       </section>
     </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="scripts/sidemenu.js"></script>
 </body>
 </html>

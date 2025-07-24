@@ -39,16 +39,20 @@
     padding: 10px;
     font-size: 1rem;
     margin-top: 2rem;
+    letter-spacing: 1px;
     background: black;
     color: #fff9ef;
     cursor: pointer;
     margin-right: 45px;
     border: 1px solid black;
+    -webkit-transition: ease-out 1s;
+    -moz-transition: ease-out 1s;
+    transition: ease-out 1s;
 }
 
 .booknow-btn:hover {
-    background: black;
-    color: #fff9ef;
+    box-shadow: inset 400px 0 0 0 #fff9ef;
+    color: #111;
 }
 .description {
     position: absolute;
@@ -62,8 +66,9 @@
 
 .bar-description {
     position: absolute;
-    top: 310vh;
+    top: 306vh;
     left: 50rem;
+    height: 100vh;
     max-width: 30%;
     text-align: left;
     padding-top: 1rem;
@@ -83,6 +88,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 25px;
+}
+
+.bar-heading {
+    top: 2rem;
 }
 
 footer {

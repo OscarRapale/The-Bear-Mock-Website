@@ -6,17 +6,17 @@
     <link rel="stylesheet" href="style/home-style.css" />
     <link rel="stylesheet" href="style/events-style.css" />
     <link rel="stylesheet" href="style/sidemenu-style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Events | The Bear</title>
   </head>
   <body>
     <main>
-
       <header class="home-header">
         <a class="header-address" href="/"
           >1340 W. Fulton Street, Chicago, IL 60607</a
         >
-        <a class="reservation-btn">RESERVATIONS</a>
+        <a href="/contact.html" class="reservation-btn">RESERVATIONS</a>
         <div class="menu-icon" id="menu-icon"">
         <div class="bar1"></div>
         <div class="bar2"></div>
@@ -31,7 +31,7 @@
       </div>>
       </header>
       <section class="event-section">
-        <div class="event-slideshow">
+        <div class="event-slideshow" data-aos="fade-up" data-aos-duration="1500">
           <img class="event-slides" src="images/private_dining.png" alt="">
           <img class="event-slides" src="images/studio.png" alt="">
           <img class="event-slides" src="images/rooftop.png" alt="">
@@ -40,7 +40,7 @@
           <i class="fa-solid fa-circle-arrow-left" id="left-arrow" onclick="plusImages(-1)"></i>
           <i class="fa-solid fa-circle-arrow-right" id="right-arrow" onclick="plusImages(1)"></i>
       </div>
-        <div class="events-wrapper">
+        <div class="events-wrapper" data-aos="fade-down" data-aos-duration="1500">
           <div class="events-container">
               <div class="events-heading">
                 <h2>Private Dining & Events</h2>
@@ -59,7 +59,7 @@
         </div>
       </section>
       <section class="events-venues-section">
-        <div class="event-venues">
+        <div class="event-venues" data-aos="fade-right" data-aos-duration="1500">
           <p>
             <span style="font-size: 24px">Private Dining Rooms</span>
           </p>
@@ -183,6 +183,10 @@
         </div>
       </section>
     </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="scripts/event.js"></script>
     <script src="scripts/sidemenu.js"></script>
   </body>

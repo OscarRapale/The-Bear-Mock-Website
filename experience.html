@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style/home-style.css" />
     <link rel="stylesheet" href="style/experience-style.css" />
     <link rel="stylesheet" href="style/sidemenu-style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <title>The Experience | The Bear</title>
   </head>
   <body>
@@ -14,7 +15,7 @@
         <a class="header-address" href="/"
           >1340 W. Fulton Street, Chicago, IL 60607</a
         >
-        <a class="reservation-btn">RESERVATIONS</a>
+        <a href="/contact.html" class="reservation-btn">RESERVATIONS</a>
         <div class="menu-icon" id="menu-icon"">
         <div class="bar1"></div>
         <div class="bar2"></div>
@@ -33,13 +34,13 @@
         <img class="slides" src="images/pastry.png" alt="">
         <img class="slides" src="images/sundae.png" alt="">
         <div class="experience-hero-content">
-          <p>THE EXPERIENCE</p>
-          <button class="booknow-btn">BOOK NOW</button>
+          <p data-aos="fade-up" data-aos-duration="1500">THE EXPERIENCE</p>
+          <a href="/contact.html" class="booknow-btn">BOOK NOW</a>
         </div>
       </div>
 
       <section class="description-section">
-        <div class="description">
+        <div class="description" data-aos="fade-right" data-aos-duration="1500">
           <p><span style="font-size: 24px">The Menu</span></p>
           <p>
             Our tasting menu features 8 to 10 thoughtfully crafted courses,
@@ -118,11 +119,15 @@
       </section>
 
       <section class="bar-section">
-        <div class="bar-image"></div>
-        <div class="bar-description">
-          <h2>The Bear's Bar</h2>
+        <div class="bar-image" data-aos="fade-right" data-aos-duration="1500"></div>
+        <div class="bar-description" data-aos="fade-left" data-aos-duration="1500">
+          <h2 class="bar-heading">The Bear's Bar</h2>
           <br />
+          <br>
+          <br>
           <p>High Craft. Low Key.</p>
+          <br>
+          <br>
           <p>
             The Bear's Bar isn’t about white tablecloths or quiet corners. It’s
             a bar built on great cocktails, lively conversation, and a laid-back
@@ -131,6 +136,7 @@
             admired.
           </p>
           <br />
+          <br>
           <p>
             Located right next door. No reservations needed, walk-ins always
             welcome.
@@ -203,7 +209,10 @@
         </div>
       </section>
     </footer>
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="scripts/experience.js"></script>
     <script src="scripts/sidemenu.js"></script>
   </body>
