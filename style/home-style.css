@@ -122,7 +122,6 @@ a {
 footer {
     position: absolute;
     top: 82.5vh;
-    z-index: 0;
 }
 
 .footer-section {
@@ -169,6 +168,7 @@ footer {
     border-bottom: 1px solid black;
     padding-top: 32px;
     padding-bottom: 5px;
+    z-index: 3;
 }
 
 .socials, .location {
@@ -185,6 +185,14 @@ footer {
     gap: 1rem;
     margin-top: 0;
     margin-bottom: 0;
+}
+
+.socials ul li {
+    cursor: pointer;
+}
+
+.socials ul li:hover {
+    transform: scale(1.1);
 }
 
 .location {
@@ -233,6 +241,10 @@ footer {
 
 }
 
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
 .links {
     grid-row: 3;
     grid-column: span 1 / -2;
@@ -248,6 +260,10 @@ footer {
     padding-left: 0;
     margin-top: 0;
     margin-bottom: 0;
+}
+
+.links ul li:hover {
+    text-decoration: underline;
 }
 
 .socials, .location, .contact-info, .links {
