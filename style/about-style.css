@@ -1,31 +1,35 @@
+.about-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 10rem 5rem 4rem 22rem;
+    padding: 2rem;
+}
+
 .about-hero-section {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
+    flex: 1;
+    display: flex;
+    align-items: center;
     z-index: 1;
 }
 
 .about-image {
-    position: absolute;
-    width: 30%;
-    height: 88vh;
-    top: 10rem;
-    left: 19rem;
+    max-width: 400px;
+    height: 100%;
+    object-fit: cover;
     border-radius: 25px;
 }
 
 .about-hero-content {
-    position: absolute;
-
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    top: 7rem;
-    left: 20rem;
-    height: 100vh;
+    flex: 2;
     color: black;
     letter-spacing: 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .about-heading {
@@ -35,47 +39,53 @@
 }
 
 .about-text {
-    position: relative;
-    width: 25%;
-    top: 4.5rem;
-    left: 2rem;
+    max-width: 300px;
     text-align: left;
     line-height: 1.5;
 }
 
+.resume-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 2rem;
+    margin: 10rem 0 4rem 23rem;
+    padding: 2rem 0 2rem 2rem;
+    position: relative;
+}
+
 .resume-image {
-    position: absolute;
-    width: 32%;
-    height: 90%;
-    top: 65rem;
-    left: 19rem;
+    max-width: 400px;
+    height: 100%;
+    object-fit: cover;
     border-radius: 25px;
+    z-index: 2;
 }
 
 .resume-wrapper {
     background: rgb(29, 27, 27);
-    position: absolute;
     text-align: left;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
     display: flex;
     flex-direction: column;
-    top: 65rem;
-    left: 51em;
-    width: 100%;
+    flex: 1;
     height: 90vh;
-    border-radius: 25px;
+    border-radius: 25px 0 0 25px;
+    position: relative;
+    margin-right: -100vw;
+    padding-right: 100vw;
 }
-
 
 .resume-container {
     letter-spacing: 1px;
-    position: relative;
-    width: 25%;
-    bottom: 1rem;
-    right: 32rem;
     color: #fff9ef;
     line-height: 1.5;
+    max-width: 300px;
+    margin-left: 2rem;
+    position: relative;
+    z-index: 1;
 }
 
 .resume-heading {
@@ -84,4 +94,38 @@
 
 footer {
 top: 240vh;
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        margin: 6rem 2rem 2rem 2rem;  /* Adjust margins for mobile */
+        gap: 3rem;
+        text-align: center;
+    }
+    
+    .about-image {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .about-text {
+        max-width: 100%;
+    }
+
+    .resume-section {
+        flex-direction: column;
+        margin: 6rem 2rem 2rem 2rem;  /* Adjust margins for mobile */
+        gap: 3rem;
+        text-align: center;
+    }
+    
+    .resume-image {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .about-wrapper {
+        max-width: 100%;
+    }
 }
