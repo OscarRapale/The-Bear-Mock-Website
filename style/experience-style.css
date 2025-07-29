@@ -1,18 +1,17 @@
 .experience-hero-section {
-    position: relative; /* Keep this for the slideshow images */
+    position: relative;
     width: 100vw;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     border-bottom: 1px solid black;
-    /* Remove: right: 9px - this causes alignment issues */
 }
 
 .slides {
-    position: absolute; /* Keep absolute for slideshow images */
+    position: absolute;
     top: 0;
-    left: 0; /* Changed from right: 9px to left: 0 */
+    margin-left: -16px;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -30,7 +29,7 @@
     font-size: 3.5rem;
     letter-spacing: 12px;
     z-index: 9;
-    /* Remove: top: 8.2rem, height: 100vh - let flexbox handle centering */
+    margin-top: 10rem;
 }
 
 .booknow-btn {
@@ -104,7 +103,6 @@
     background-position: center;
     border-radius: 25px;
     flex-shrink: 0; /* Prevent shrinking */
-    margin-left: 10rem;
 }
 
 .bar-heading {
@@ -115,4 +113,75 @@ footer {
     top: 385vh;
 }
 
-/* Add this new container to hold all content sections */
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .experience-hero-content {
+        font-size: 2rem; /* Smaller on mobile */
+        letter-spacing: 8px;
+        padding: 0 1rem;
+    }
+    
+    .booknow-btn {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+    
+    .description-section {
+        padding: 0 1rem; /* Less padding on mobile */
+    }
+    
+    .description {
+        font-size: 0.9rem;
+    }
+    
+    .bar-section {
+        flex-direction: column; /* Stack vertically on mobile */
+        padding: 0 1rem;
+        gap: 2rem;
+    }
+    
+    .bar-image {
+        width: 100%;
+        height: 300px; /* Smaller height on mobile */
+        order: 1; /* Image first */
+    }
+    
+    .bar-description {
+        order: 2; /* Text second */
+    }
+    
+    .main-content {
+        gap: 4rem; /* Less gap on mobile */
+        margin-top: 4rem;
+    }
+}
+
+/* Tablet Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .experience-hero-content {
+        font-size: 3rem;
+        letter-spacing: 10px;
+    }
+    
+    .bar-section {
+        max-width: 900px;
+        gap: 1.5rem;
+    }
+    
+    .bar-image {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+/* Large Desktop */
+@media (min-width: 1200px) {
+    .bar-section {
+        max-width: 1400px;
+    }
+    
+    .bar-image {
+        width: 600px;
+        height: 500px;
+    }
+}

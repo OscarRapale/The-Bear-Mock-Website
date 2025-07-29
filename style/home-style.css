@@ -9,6 +9,8 @@ body {
     font-family: "mainFont", "Helvetica", "Arial", sans-serif;
     line-height: 1.5;
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 a {
@@ -21,39 +23,38 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    position: absolute;
-    width: 110vw;
+    width: 100vw; /* Changed from 110vw */
     height: 100vh;
-    top: 0;
-    left: 0;
-    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Changed from absolute */
+    /* Remove: top: 0, left: 0 */
 }
 
 .hero-content {
-    position: relative;
     text-align: center;
-    align-items: center;
-    justify-content: center;
     display: flex;
     flex-direction: column;
-    top: 8.2rem;
-    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16rem;
     color: black;
-    font-size: 5rem;
-    letter-spacing: 15px;
+    font-size: clamp(3rem, 8vw, 5rem); /* Responsive font size */
+    letter-spacing: 20px; /* Responsive letter spacing */
+    z-index: 2;
 }
 
-
 .experience-btn {
-    padding: 10px;
+    padding: 12px 24px;
     font-size: 1rem;
     margin-top: 2rem;
     letter-spacing: 1px;
     background: #111;
     color: #fff9ef;
-    margin-right: 45px;
     border: 1px solid black;
     cursor: pointer;
+    transition: ease-out 0.5s;
 }
 
 .experience-btn:hover {
@@ -65,31 +66,52 @@ a {
     z-index: 10;
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     background-color: black;
-    width: 100vw;
-    height: 35px;
-    margin-top: -1.1vh;
-    right: 10px;
+    width: 100%; /* Changed from 100vw to 100% */
+    height: 60px;
+    padding: 0 2rem;
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.header-logo {
+    /* Placeholder for logo */
+    width: 120px;
+    height: 40px;
+    background-color: #fff9ef; /* Temporary placeholder background */
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    color: black;
+    flex-shrink: 0; /* Prevent shrinking */
 }
 
 .header-address {
     position: absolute;
-    top: 8px; 
-    text-decoration: none;
+    left: 50%;
+    transform: translateX(-50%); /* Center the address */
     color: #fff9ef;
+    font-size: 0.9rem;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-shrink: 0; /* Prevent shrinking */
 }
 
 .reservation-btn {
-    position: absolute;
-    right: 8rem;
-    top: 3rem;
-    border: 1px solid black;
+    border: 1px solid #fff9ef;
     background: #111;
-    padding: 10px;
+    padding: 8px 16px;
     letter-spacing: 1px;
     color: #fff9ef;
     cursor: pointer;
+    font-size: 0.9rem;
 }
 
 .reservation-btn, .experience-btn {
@@ -106,36 +128,39 @@ a {
 .menu-icon {
     display: flex;
     flex-direction: column;
-    position: absolute;
-    right: 3rem;
-    top: 3.4rem;
     cursor: pointer;
+    min-width: 30px; /* Ensure minimum width */
 }
 
 .bar1, .bar2, .bar3 {
     width: 30px;
     height: 4px;
-    background-color: black;
+    background-color: #fff9ef;
     margin-bottom: 6px;
 }
 
+/* Remove the last margin from the last bar */
+.bar3 {
+    margin-bottom: 0;
+}
+
 footer {
-    position: absolute;
-    top: 82.5vh;
+    margin-top: auto; /* Pushes footer to bottom */
+    /* Remove: position: absolute, top: 82.5vh */
 }
 
 .footer-section {
     border-top: 1px solid black;
     display: grid;
     gap: 24px;
-    margin-left: 0;
-    margin-right: 0;
-    width: 100vw;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
     grid-template-columns: 1fr repeat(12, minmax(0, 93px)) 1fr;
     grid-template-rows: min-content min-content minmax(5rem, 10rem);
     row-gap: 0;
-    padding-bottom: 28px;
-    margin-top: 8rem;
+    /* Remove: margin-left: 0, margin-right: 0, width: 100vw, padding-bottom: 28px, margin-top: 8rem */
 }
 
 .footer-section::before {
@@ -275,4 +300,139 @@ footer {
     grid-column: 10;
     border-left: 1px solid black;
     width: 2px;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content-wrapper {
+    flex: 1; /* Takes up available space */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .home-header {
+        height: 50px;
+        padding: 0 1rem;
+        /* Remove flex-wrap: wrap; - this was causing issues */
+    }
+
+    .hero-content {
+        margin-top: 14rem;
+    }
+    
+    .header-logo {
+        width: 60px; /* Smaller on mobile */
+        height: 25px;
+        font-size: 0.6rem;
+    }
+    
+    .header-address {
+        display: none;
+    }
+    
+    .header-right {
+        gap: 1rem;
+    }
+    
+    .reservation-btn {
+        padding: 6px 10px; /* Smaller padding */
+        font-size: 0.7rem;
+    }
+    
+    .menu-icon {
+        min-width: 25px;
+    }
+    
+    .bar1, .bar2, .bar3 {
+        width: 25px;
+        height: 3px;
+        margin-bottom: 4px;
+    }
+    
+    .hero-content p {
+        margin: 0;
+        padding: 0 1rem;
+    }
+    
+    .experience-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    /* Stack footer grid on mobile */
+    .footer-section {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 2rem;
+        padding: 1rem;
+    }
+    
+    .footer-text,
+    .socials,
+    .location,
+    .contact-info,
+    .links {
+        grid-column: 1;
+        grid-row: auto;
+        border-bottom: 1px solid #111;
+    }
+    
+    .socials,
+    .location {
+        width: auto;
+        padding-left: 0;
+    }
+
+    .location {
+        border: none;
+    }
+    
+    .contact-info {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .footer-section::before,
+    .footer-section::after {
+        display: none; /* Remove grid decorative elements on mobile */
+    }
+}
+
+/* Tablet Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .home-header {
+        padding: 0 1.5rem;
+    }
+    
+    .hero-content {
+        font-size: clamp(3.5rem, 6vw, 4.5rem);
+        margin-top: 19rem;
+    }
+    
+    .footer-section {
+        padding: 1.5rem;
+        max-width: 1000px;
+    }
+    
+    .contact-info {
+        gap: 60px;
+    }
+}
+
+/* Large Desktop */
+@media (min-width: 1200px) {
+    .footer-section {
+        max-width: 1600px;
+        padding: 3rem;
+    }
+    
+    .contact-info {
+        gap: 150px;
+    }
 }

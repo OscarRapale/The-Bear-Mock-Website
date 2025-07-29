@@ -2,33 +2,124 @@
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 10;
+    z-index: 100; /* Higher z-index to ensure it's above everything */
     top: 0;
     right: 0;
     background-color: #111;
     overflow-x: hidden;
     padding-top: 60px;
-    transition: 0.5s;
+    transition: width 0.5s ease-in-out;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5); /* Add shadow for depth */
+}
+
+/* When menu is open */
+.sidenav.open {
+    width: 300px;
 }
 
 .sidenav a {
-    padding: 8px 8px 8px 32px;
+    padding: 16px 32px; /* Increased padding for better touch targets */
     text-decoration: none;
-    font-size: 25px;
+    font-size: 18px; /* Slightly smaller for better readability */
     color: #fff9ef;
     display: block;
-    transition: 0.3s;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(255, 249, 239, 0.1); /* Subtle dividers */
 }
 
 .sidenav a:hover {
     background: #fff9ef;
     color: #111;
+    transform: translateX(-10px); /* Slide effect on hover */
 }
 
-.sidenav .closebtn {
+/* Close button */
+.close-btn {
     position: absolute;
-    top: 0;
+    top: 15px;
     right: 25px;
     font-size: 36px;
-    margin-left: 50px;
+    color: #fff9ef;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #ccc;
+}
+
+/* Overlay background when menu is open */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Mobile Styles (Default) */
+@media (max-width: 768px) {
+    .sidenav {
+        width: 0;
+        padding-top: 80px; /* More space from top on mobile */
+    }
+    
+    .sidenav.open {
+        width: 280px; /* Slightly narrower on mobile */
+    }
+    
+    .sidenav a {
+        padding: 20px 24px; /* Larger touch targets on mobile */
+        font-size: 20px;
+    }
+    
+    .close-btn {
+        top: 20px;
+        right: 20px;
+        font-size: 32px;
+    }
+}
+
+/* Tablet Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .sidenav.open {
+        width: 320px;
+    }
+    
+    .sidenav a {
+        font-size: 19px;
+        padding: 18px 28px;
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 1025px) {
+    .sidenav.open {
+        width: 350px;
+    }
+    
+    .sidenav a {
+        font-size: 18px;
+        padding: 16px 32px;
+    }
+    
+    /* Optional: Add hover effects only on desktop */
+    .sidenav a:hover {
+        transform: translateX(-15px);
+    }
+}
+
+/* Prevent body scroll when menu is open */
+body.menu-open {
+    overflow: hidden;
 }
