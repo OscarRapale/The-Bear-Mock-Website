@@ -23,13 +23,12 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    width: 100vw; /* Changed from 110vw */
+    width: 100vw;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative; /* Changed from absolute */
-    /* Remove: top: 0, left: 0 */
+    position: relative;
 }
 
 .hero-content {
@@ -40,8 +39,8 @@ a {
     justify-content: center;
     margin-top: 16rem;
     color: black;
-    font-size: clamp(3rem, 8vw, 5rem); /* Responsive font size */
-    letter-spacing: 20px; /* Responsive letter spacing */
+    font-size: clamp(3rem, 8vw, 5rem);
+    letter-spacing: 20px;
     z-index: 2;
 }
 
@@ -69,30 +68,29 @@ a {
     justify-content: space-between;
     align-items: center;
     background-color: black;
-    width: 100%; /* Changed from 100vw to 100% */
+    width: 100%;
     height: 60px;
     padding: 0 2rem;
-    box-sizing: border-box; /* Ensure padding is included in width */
+    box-sizing: border-box;
 }
 
 .header-logo {
-    /* Placeholder for logo */
     width: 120px;
     height: 40px;
-    background-color: #fff9ef; /* Temporary placeholder background */
-    border-radius: 4px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.8rem;
-    color: black;
-    flex-shrink: 0; /* Prevent shrinking */
+    font-size: 1.1rem;
+    letter-spacing: 5px;
+    color: #fff9ef;
+    flex-shrink: 0;
+    text-decoration: line-through;
 }
 
 .header-address {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%); /* Center the address */
+    transform: translateX(-50%);
     color: #fff9ef;
     font-size: 0.9rem;
 }
@@ -101,7 +99,7 @@ a {
     display: flex;
     align-items: center;
     gap: 2rem;
-    flex-shrink: 0; /* Prevent shrinking */
+    flex-shrink: 0;
 }
 
 .reservation-btn {
@@ -129,7 +127,7 @@ a {
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    min-width: 30px; /* Ensure minimum width */
+    min-width: 30px;
 }
 
 .bar1, .bar2, .bar3 {
@@ -139,14 +137,12 @@ a {
     margin-bottom: 6px;
 }
 
-/* Remove the last margin from the last bar */
 .bar3 {
     margin-bottom: 0;
 }
 
 footer {
-    margin-top: auto; /* Pushes footer to bottom */
-    /* Remove: position: absolute, top: 82.5vh */
+    margin-top: auto;
 }
 
 .footer-section {
@@ -160,7 +156,6 @@ footer {
     grid-template-columns: 1fr repeat(12, minmax(0, 93px)) 1fr;
     grid-template-rows: min-content min-content minmax(5rem, 10rem);
     row-gap: 0;
-    /* Remove: margin-left: 0, margin-right: 0, width: 100vw, padding-bottom: 28px, margin-top: 8rem */
 }
 
 .footer-section::before {
@@ -309,7 +304,7 @@ footer {
 }
 
 .content-wrapper {
-    flex: 1; /* Takes up available space */
+    flex: 1;
     display: flex;
     flex-direction: column;
 }
@@ -319,7 +314,6 @@ footer {
     .home-header {
         height: 50px;
         padding: 0 1rem;
-        /* Remove flex-wrap: wrap; - this was causing issues */
     }
 
     .hero-content {
@@ -327,7 +321,7 @@ footer {
     }
     
     .header-logo {
-        width: 60px; /* Smaller on mobile */
+        width: 60px;
         height: 25px;
         font-size: 0.6rem;
     }
@@ -341,7 +335,7 @@ footer {
     }
     
     .reservation-btn {
-        padding: 6px 10px; /* Smaller padding */
+        padding: 6px 10px;
         font-size: 0.7rem;
     }
     
@@ -365,7 +359,6 @@ footer {
         font-size: 0.9rem;
     }
     
-    /* Stack footer grid on mobile */
     .footer-section {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
@@ -400,7 +393,7 @@ footer {
     
     .footer-section::before,
     .footer-section::after {
-        display: none; /* Remove grid decorative elements on mobile */
+        display: none;
     }
 }
 

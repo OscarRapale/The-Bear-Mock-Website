@@ -3,9 +3,9 @@
     overflow: hidden;
     z-index: 1;
     position: relative;
-    width: 400px; /* Add fixed width */
-    height: 658px; /* Add fixed height */
-    flex-shrink: 0; /* Prevent shrinking in flexbox */
+    width: 400px;
+    height: 658px;
+    flex-shrink: 0;
 }
 
 .event-section {
@@ -63,7 +63,6 @@
     position: relative;
 }
 
-/* Style the Font Awesome arrows */
 #left-arrow, #right-arrow {
     position: absolute;
     top: 50%;
@@ -99,9 +98,46 @@
 }
 
 footer {
-top: 300vh;
+    position: relative;
+    margin-top: 6rem;
 }
 
+/* Tablet Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .event-section {
+        margin: 8rem 2rem 4rem 15rem;
+        padding: 2rem 0 2rem 1rem;
+        gap: 1.5rem;
+    }
+    
+    .event-slideshow {
+        width: 350px;
+        height: 700px;
+    }
+    
+    .event-wrapper {
+        height: 700px;
+        margin-right: -50vw;
+        padding-right: 50vw;
+    }
+    
+    .event-container {
+        max-width: 280px;
+        margin-left: 1.5rem;
+    }
+    
+    .event-venues {
+        margin-left: 15rem;
+        max-width: 700px;
+        padding: 0 2rem;
+    }
+    
+    #left-arrow, #right-arrow {
+        font-size: 1.8rem;
+    }
+}
+
+/* Mobile Styles */
 @media (max-width: 768px) {
     .event-slideshow {
         width: 100%;
@@ -128,9 +164,20 @@ top: 300vh;
     
     .event-venues {
         flex-direction: column;
-        margin: 6rem 2rem 2rem 4.5rem;
+        margin: 6rem 2rem 2rem 2rem;
         gap: 3rem;
         text-align: left;
         max-width: 100%;
+    }
+    
+    .event-wrapper {
+        margin-right: 0;
+        padding-right: 2rem;
+        border-radius: 25px;
+        height: auto;
+    }
+    
+    #left-arrow, #right-arrow {
+        font-size: 1.5rem;
     }
 }

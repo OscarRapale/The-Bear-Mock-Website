@@ -2,38 +2,36 @@
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 100; /* Higher z-index to ensure it's above everything */
+    z-index: 100;
     top: 0;
     right: 0;
     background-color: #111;
     overflow-x: hidden;
     padding-top: 60px;
     transition: width 0.5s ease-in-out;
-    box-shadow: -2px 0 5px rgba(0,0,0,0.5); /* Add shadow for depth */
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
 }
 
-/* When menu is open */
 .sidenav.open {
     width: 300px;
 }
 
 .sidenav a {
-    padding: 16px 32px; /* Increased padding for better touch targets */
+    padding: 16px 32px;
     text-decoration: none;
-    font-size: 18px; /* Slightly smaller for better readability */
+    font-size: 18px;
     color: #fff9ef;
     display: block;
     transition: all 0.3s ease;
-    border-bottom: 1px solid rgba(255, 249, 239, 0.1); /* Subtle dividers */
+    border-bottom: 1px solid rgba(255, 249, 239, 0.1);
 }
 
 .sidenav a:hover {
     background: #fff9ef;
     color: #111;
-    transform: translateX(-10px); /* Slide effect on hover */
+    transform: translateX(-10px);
 }
 
-/* Close button */
 .close-btn {
     position: absolute;
     top: 15px;
@@ -48,7 +46,6 @@
     color: #ccc;
 }
 
-/* Overlay background when menu is open */
 .menu-overlay {
     position: fixed;
     top: 0;
@@ -67,19 +64,18 @@
     visibility: visible;
 }
 
-/* Mobile Styles (Default) */
 @media (max-width: 768px) {
     .sidenav {
         width: 0;
-        padding-top: 80px; /* More space from top on mobile */
+        padding-top: 80px;
     }
     
     .sidenav.open {
-        width: 280px; /* Slightly narrower on mobile */
+        width: 280px;
     }
     
     .sidenav a {
-        padding: 20px 24px; /* Larger touch targets on mobile */
+        padding: 20px 24px;
         font-size: 20px;
     }
     
@@ -113,13 +109,11 @@
         padding: 16px 32px;
     }
     
-    /* Optional: Add hover effects only on desktop */
     .sidenav a:hover {
         transform: translateX(-15px);
     }
 }
 
-/* Prevent body scroll when menu is open */
 body.menu-open {
     overflow: hidden;
 }

@@ -47,9 +47,40 @@
 }
 
 footer {
-    top: 130vh;
+    position: relative;
+    margin-top: 6rem;
 }
 
+/* Tablet Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .contact-section {
+        margin: 8rem 2rem 4rem 15rem;
+        padding: 2rem 0 2rem 1rem;
+        gap: 1.5rem;
+    }
+    
+    .contact-image {
+        max-width: 350px;
+        height: 700px;
+    }
+    
+    .contact-wrapper {
+        height: 700px;
+        margin-right: -50vw;
+        padding-right: 50vw;
+    }
+    
+    .contact-container {
+        max-width: 280px;
+        margin-left: 1.5rem;
+    }
+    
+    .contact-heading {
+        font-size: 22px;
+    }
+}
+
+/* Mobile Styles */
 @media (max-width: 768px) {
     .contact-wrapper {
         max-width: 100%;
@@ -65,5 +96,12 @@ footer {
     .contact-image {
         max-width: 100%;
         height: auto;
-    }   
+    }
+    
+    .contact-wrapper {
+        margin-right: 0;
+        padding-right: 2rem;
+        border-radius: 25px;
+        height: auto;
+    }
 }
