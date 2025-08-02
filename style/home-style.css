@@ -163,6 +163,7 @@ footer {
     grid-column: 1 / -1;
     border-top: 1px solid black;
     height: 2px;
+    margin-left: -3rem;
 }
 
 .footer-section::before, .footer-section::after {
@@ -295,6 +296,7 @@ footer {
     grid-column: 10;
     border-left: 1px solid black;
     width: 2px;
+    margin-top: -3rem;
 }
 
 .main-container {
