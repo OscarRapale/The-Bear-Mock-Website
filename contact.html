@@ -3,11 +3,66 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contact The Line Restaurant Chicago for reservations and inquiries. Located at 1243 N. Wells Street in River North. Call (312) 555-1996 or email for fine dining reservations."
+    />
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Contact & Reservations | The Line Restaurant Chicago">
+    <meta property="og:description" content="Contact The Line Restaurant Chicago for reservations. Located at 1243 N. Wells Street in River North. Call (312) 555-1996 for fine dining reservations.">
+    <meta property="og:image" content="https://the-line-restaurant.onrender.com/images/hero-image.png">
+    <meta property="og:url" content="https://the-line-restaurant.onrender.com/contact.html">
+    <meta property="og:type" content="website">
+    
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+
     <link rel="stylesheet" href="style/home-style.css" />
     <link rel="stylesheet" href="style/contact-style.css" />
     <link rel="stylesheet" href="style/sidemenu-style.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <title>Contact Us | The Line</title>
+    <title>Contact & Reservations | The Line Restaurant Chicago</title>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "mainEntity": {
+          "@type": "Restaurant",
+          "name": "The Line",
+          "description": "Fine dining restaurant reservations and contact information",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "1243 N. Wells Street",
+            "addressLocality": "Chicago",
+            "addressRegion": "IL",
+            "postalCode": "60610",
+            "addressCountry": "US"
+          },
+          "telephone": "(312) 555-1996",
+          "email": "info@thelinechicago.com",
+          "url": "https://the-line-restaurant.onrender.com/",
+          "openingHours": [
+            "We 12:00-15:00",
+            "Th 12:00-15:00",
+            "Fr 12:00-15:00",
+            "Sa 12:00-15:00",
+            "Su 12:00-15:00",
+            "We 17:30-22:30",
+            "Th 17:30-22:30",
+            "Fr 17:30-22:30",
+            "Sa 17:30-22:30"
+          ],
+          "priceRange": "$$$",
+          "acceptsReservations": true,
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "(312) 555-1996",
+            "contactType": "reservations",
+            "availableLanguage": "English"
+          }
+        }
+      }
+    </script>
   </head>
   <body>
     <main>
@@ -46,7 +101,7 @@
           <img
             class="contact-image"
             src="images/salmon.png"
-            alt=""
+            alt="Gourmet salmon dish from The Line restaurant Chicago fine dining menu"
             data-aos="fade-right"
             data-aos-duration="1500"
           />
@@ -105,20 +160,20 @@
               <a href="https://www.instagram.com/accounts/login/?hl=en" 
                 target="_blank"
                 >
-                <img src="images/instagram-icon.svg" alt="instagram icon" />
+                <img src="images/instagram-icon.svg" alt="Follow The Line Restaurant Chicago on Instagram" />
               </a>
             </li>
             <li>
               <a href="https://www.tiktok.com/explore"
                 target="_blank"
                 >
-                <img src="images/tiktok-icon.svg" alt="tiktok icon" />
+                <img src="images/tiktok-icon.svg" alt="Follow The Line Restaurant Chicago on TikTok" />
               </a>
             </li>
           </ul>
         </article>
         <div class="location">
-          <img src="images/building.svg" alt="" />
+          <img src="images/building.svg" alt="The Line Restaurant location in River North Chicago" />
           <span>Visit us at River North Chicago, IL</span>
         </div>
         <div class="contact-info">

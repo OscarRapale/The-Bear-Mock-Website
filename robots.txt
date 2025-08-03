@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://the-line-restaurant.onrender.com/sitemap.xml
+
+# Block access to certain files (optional)
+Disallow: /style/
+Disallow: /scripts/

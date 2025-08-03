@@ -3,18 +3,79 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Learn about The Line restaurant's culinary philosophy, our Chicago-based chef team, and commitment to precision dining in River North. Discover our story and passion for exceptional cuisine."
+    />
+    <!-- Open Graph Meta Tags -->
+    <meta
+      property="og:title"
+      content="About Us | The Line Restaurant Chicago"
+    />
+    <meta
+      property="og:description"
+      content="Learn about The Line's culinary philosophy, our Chicago-based chef team, and commitment to precision dining in River North."
+    />
+    <meta
+      property="og:image"
+      content="https://the-line-restaurant.onrender.com/images/hero-image.png"
+    />
+    <meta
+      property="og:url"
+      content="https://the-line-restaurant.onrender.com/about.html"
+    />
+    <meta property="og:type" content="website" />
+
+    <link
+      rel="sitemap"
+      type="application/xml"
+      title="Sitemap"
+      href="/sitemap.xml"
+    />
     <link rel="stylesheet" href="style/home-style.css" />
     <link rel="stylesheet" href="style/about-style.css" />
     <link rel="stylesheet" href="style/sidemenu-style.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <title>About Us | The Line</title>
+    <title>About Us | The Line Fine Dining Chicago</title>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "mainEntity": {
+          "@type": "Restaurant",
+          "name": "The Line",
+          "description": "Fine dining restaurant in Chicago's River North featuring precision cuisine and seasonal ingredients",
+          "founder": {
+            "@type": "Person",
+            "name": "Chef [Your Chef's Name]",
+            "jobTitle": "Executive Chef"
+          },
+          "knowsAbout": [
+            "Fine Dining",
+            "Seasonal Cuisine",
+            "Tasting Menus",
+            "Culinary Arts",
+            "Chicago Dining"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "1243 N. Wells Street",
+            "addressLocality": "Chicago",
+            "addressRegion": "IL",
+            "postalCode": "60610",
+            "addressCountry": "US"
+          },
+          "telephone": "(312) 555-1996",
+          "url": "https://the-line-restaurant.onrender.com/"
+        }
+      }
+    </script>
   </head>
   <body>
     <main>
       <header class="home-header">
-        <a href="/index.html" class="header-logo">
-          THE LINE
-        </a>
+        <a href="/index.html" class="header-logo"> THE LINE </a>
 
         <a
           class="header-address"
@@ -50,7 +111,7 @@
           <img
             class="about-image"
             src="images/chefs_working.png"
-            alt="Chefs working"
+            alt="Professional chefs working in The Line restaurant kitchen in Chicago River North"
           />
         </div>
         <div
@@ -92,7 +153,7 @@
           <img
             class="resume-image"
             src="images/chef.jpg"
-            alt="Line chef cooking"
+            alt="Executive chef preparing fine dining dish at The Line Chicago restaurant"
             data-aos="fade-right"
             data-aos-duration="1500"
           />
@@ -153,18 +214,27 @@
                 href="https://www.instagram.com/accounts/login/?hl=en"
                 target="_blank"
               >
-                <img src="images/instagram-icon.svg" alt="instagram icon" />
+                <img
+                  src="images/instagram-icon.svg"
+                  alt="Follow The Line Restaurant Chicago on Instagram"
+                />
               </a>
             </li>
             <li>
               <a href="https://www.tiktok.com/explore">
-                <img src="images/tiktok-icon.svg" alt="tiktok icon" />
+                <img
+                  src="images/tiktok-icon.svg"
+                  alt="Follow The Line Restaurant Chicago on TikTok"
+                />
               </a>
             </li>
           </ul>
         </article>
         <div class="location">
-          <img src="images/building.svg" alt="" />
+          <img
+            src="images/building.svg"
+            alt="The Line Restaurant location in River North Chicago"
+          />
           <span>Visit us at River North Chicago, IL</span>
         </div>
         <div class="contact-info">
